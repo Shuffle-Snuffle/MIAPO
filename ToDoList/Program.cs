@@ -78,6 +78,29 @@ class Program
         }
     }
 
+    static void AddTask()
+    {
+        Console.Write("Input title of the task: ");
+        string title = Console.ReadLine();
+
+        Console.Write("Input description of the task: ");
+        string description = Console.ReadLine();
+
+        Console.Write("Input the deadline for the task (please follow the input format in this form dd.mm.yyyy): ");
+        string taskDeadline = Console.ReadLine();
+
+        if (DateTime.TryParseExact(taskDeadline, "dd.MM.yyyy", null, DateTimeStyles.None, out DateTime deadline))
+        {
+            tasks.Add(new Datebook { Title = title, Description = description, TaskDeadline = deadline });
+            SaveTasks();
+            Console.WriteLine("Task successfully added");
+        }
+        else
+        {
+            Console.WriteLine("Invalid date format. Task was not added.");
+        }
+    }
+
     static void ViewTasksForDay(DateTime date)
     {
         Console.WriteLine($"Tasks for the {date.ToShortDateString()}:");
