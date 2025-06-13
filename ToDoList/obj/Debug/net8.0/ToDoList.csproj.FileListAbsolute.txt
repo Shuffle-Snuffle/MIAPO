@@ -1,0 +1,14 @@
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\bin\Debug\net8.0\ToDoList.exe
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\bin\Debug\net8.0\ToDoList.deps.json
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\bin\Debug\net8.0\ToDoList.runtimeconfig.json
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\bin\Debug\net8.0\ToDoList.dll
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\bin\Debug\net8.0\ToDoList.pdb
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfoInputs.cache
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfo.cs
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.csproj.CoreCompileInputs.cache
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.dll
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\refint\ToDoList.dll
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.pdb
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.genruntimeconfig.cache
+C:\Users\Snuffle\source\repos\ToDoList\ToDoList\obj\Debug\net8.0\ref\ToDoList.dll
