@@ -116,7 +116,7 @@ class Program
     }
     static void AddTask()
     {
-        Console.Write("Input title of the task: ");
+        Console.Write("Input  title of the task: ");
         
         string title = Console.ReadLine();
 
@@ -138,42 +138,21 @@ class Program
         }
     }
 
-    static void EditTask()
+    static void RemoveTask()
     {
-        Console.Write("Input the index of the task to edit: ");
+        Console.Write("Input index of the task for deleting: ");
         if (int.TryParse(Console.ReadLine(), out int index) && index >= 0 && index < tasks.Count)
         {
-            Datebook task = tasks[index];
-
-            Console.Write("Input a new task name (to save current value leave field empty): ");
-            string title = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(title))
-            {
-                task.Title = title;
-            }
-
-            Console.Write("Input a new task description (to save current value leave field empty): ");
-            string description = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(description))
-            {
-                task.Description = description;
-            }
-
-            Console.Write("Enter a new task deadline (please follow the input format in this form dd.mm.yyyy) (to save current value leave field empty): ");
-            string deadline = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(deadline) && DateTime.TryParseExact(deadline, "dd.MM.yyyy", null, DateTimeStyles.None, out DateTime taskDeadline))
-            {
-                task.TaskDeadline = taskDeadline;
-            }
-
+            tasks.RemoveAt(index);
             SaveTasks();
-            Console.WriteLine("Task successfully edited");
+            Console.WriteLine("Task successfully deleted");
         }
         else
         {
-            Console.WriteLine("Invalid task index. The task has not been edited.");
+            Console.WriteLine("Invalid input of index of the task. Task was not deleted.");
         }
     }
+
     static void ViewTasksForDay(DateTime date)
     {
         Console.WriteLine($"Tasks for the {date.ToShortDateString()}:");
