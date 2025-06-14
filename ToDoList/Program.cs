@@ -236,15 +236,27 @@ class Program
             Console.WriteLine("There are no tasks in datebook");
         }
     }
-
+    static void ViewAllTasks()
+    {
+        Console.WriteLine("All tasks:");
+        if (tasks.Count != 0)
+        {
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                var task = tasks[i];
+                Console.WriteLine($"№{i}) {task.Title}: ({task.Description}) - {task.TaskDeadline.ToShortDateString()}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("There are no tasks in datebook");
+        }
+    }
     static void SaveTasks()
     {
         string jsonData = JsonSerializer.Serialize(tasks);
         File.WriteAllText(dataFilePath, jsonData);
     }
-
-
-
 }
 
 class Datebook
