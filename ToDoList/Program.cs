@@ -116,7 +116,7 @@ class Program
     }
     static void AddTask()
     {
-        Console.Write("Input title of the task: ");
+        Console.Write("Input  title of the task: ");
         string title = Console.ReadLine();
 
         Console.Write("Input description of the task: ");
