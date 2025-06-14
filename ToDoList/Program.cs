@@ -78,6 +78,42 @@ class Program
         }
     }
 
+    static void EditTask()
+    {
+        Console.Write("Input the index of the task to edit: ");
+        if (int.TryParse(Console.ReadLine(), out int index) && index >= 0 && index < tasks.Count)
+        {
+            Datebook task = tasks[index];
+
+            Console.Write("Input a new task name (to save current value leave field empty): ");
+            string title = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(title))
+            {
+                task.Title = title;
+            }
+
+            Console.Write("Input a new task description (to save current value leave field empty): ");
+            string description = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(description))
+            {
+                task.Description = description;
+            }
+
+            Console.Write("Enter a new task deadline (please follow the input format in this form dd.mm.yyyy) (to save current value leave field empty): ");
+            string deadline = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(deadline) && DateTime.TryParseExact(deadline, "dd.MM.yyyy", null, DateTimeStyles.None, out DateTime taskDeadline))
+            {
+                task.TaskDeadline = taskDeadline;
+            }
+
+            SaveTasks();
+            Console.WriteLine("Task successfully edited");
+        }
+        else
+        {
+            Console.WriteLine("Invalid task index. The task has not been edited.");
+        }
+    }
     static void AddTask()
     {
         Console.Write("Input title of the task: ");
